@@ -58,7 +58,7 @@ class RigidRegistration(EMRegistration):
             raise ValueError(
                 'The scale factor must be a positive number. Instead got: {}.'.format(s))
 
-        if rotationFilter is not None and ((rotationFilter != 'x') or (rotationFilter != 'y') or (rotationFilter != 'z')):
+        if rotationFilter is not None and ((rotationFilter != 'x') and (rotationFilter != 'y') and (rotationFilter != 'z')):
             raise ValueError(
                 'Valid rotation filters are x,y or z. If one of those values is set, only rotations areound this axis are allowed. Instead got: {}.'.format(rotationFilter))
 
